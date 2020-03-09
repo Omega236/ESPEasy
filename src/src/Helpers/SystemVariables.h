@@ -22,6 +22,7 @@ public:
     LF,
     MAC,
     MAC_INT,
+    MILLIS,
     RSSI,
     SPACE,
     SSID,

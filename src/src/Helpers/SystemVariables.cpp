@@ -96,6 +96,7 @@ void SystemVariables::parseSystemVariables(String& s, boolean useURLencode)
     #else
       case MAC_INT:           value = ""; break;   // FIXME TD-er: Must find proper altrnative for ESP32.
     #endif
+      case MILLIS:            value = millis(); break;
       case RSSI:              value = getValue(LabelType::WIFI_RSSI); break;
       case SPACE:             value = " "; break;
       case SSID:              value = (wifiStatus == ESPEASY_WIFI_DISCONNECTED) ? F("--") : WiFi.SSID(); break;
@@ -237,6 +238,7 @@ String SystemVariables::toString(SystemVariables::Enum enumval)
     case Enum::LF:              return F("%LF%");
     case Enum::MAC:             return F("%mac%");
     case Enum::MAC_INT:         return F("%mac_int%");
+    case Enum::MILLIS:          return F("%millis%");
     case Enum::RSSI:            return F("%rssi%");
     case Enum::SPACE:           return F("%SP%");
     case Enum::SSID:            return F("%ssid%");

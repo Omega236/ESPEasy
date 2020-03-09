@@ -82,6 +82,7 @@ void handle_sysvars() {
   addSysVar_html(F("%sysweekday_s%"));
   addTableSeparator(F("System"), 3, 3);
   addSysVar_html(F("%uptime%"));
+  addSysVar_html(F("%millis%"));
   addSysVar_html(F("%unixtime%"));
   addSysVar_html(F("%unixday%"));
   addSysVar_html(F("%unixday_sec%"));
